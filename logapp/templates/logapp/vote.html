@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    
+    <h3>Fill the form below to vote for a candidate</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ vote_form.as_p }}
+        <input type="submit" value="Vote Now!">
+    </form>
+
+{% endblock %}

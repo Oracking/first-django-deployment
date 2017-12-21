@@ -1,0 +1,6 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <p>You are already logged in as {{ user.username }}.</p>
+    <p>Do you wish to <a href="{% url 'user_logout' %}">logout</a>?</p>
+{% endblock %}

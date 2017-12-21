@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h3>Fill the form below with your details to login and vote</h3>
+    <form action="{% url 'user_login' %}" method="POST">
+        {% csrf_token %}
+        <label for="user_id">Student Id: </label>
+        <input type="number" name="user_id">
+        <label for="password">Password: </label>
+        <input type="password" name="password">
+        <input type="submit" value="login">
+    </form>
+{% endblock %}

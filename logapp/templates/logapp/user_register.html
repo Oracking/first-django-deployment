@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h3>Welcome to the registration page</h3>
+    <p>Fill the form below in order to register to vote</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ student_user_form.as_p }}
+        <input type="submit" value="Register!">
+    </form>
+{% endblock %}
